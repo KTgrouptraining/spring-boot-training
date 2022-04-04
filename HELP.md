@@ -591,6 +591,33 @@ stateid
 }
 
 
+States
+----------
+Sid  Sname  
+------------------
+101   AP
+102   MP
+103   UP
+
+
+depenedency
+
+spring data jpa
+
+h2(in memory database) a h2 depe
+
+
+Basic details in order to connect db:
+------------------------------------
+username
+password
+db name
+which datbased
+drivers for that db
+
+
+
+
 
 
 
