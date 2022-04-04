@@ -1,0 +1,602 @@
+# Read Me First
+The following was discovered as part of building this project:
+
+* The original package name 'com.springboot-training.helloworldapp' is invalid and this project uses 'com.springboottraining.helloworldapp' instead.
+
+# Getting Started
+
+### Reference Documentation
+For further reference, please consider the following sections:
+
+* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.6.5/maven-plugin/reference/html/)
+* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.6.5/maven-plugin/reference/html/#build-image)
+
+
+Spring Boot:
+-------------
+
+5.	SLF4J,Spring JDBC , hikari connection pool , ehcache ,swagger,Spring AOP , Chain of filters ,Rest template 
+
+SLF4J/log4j
+
+logging
+
+class{
+Sysout("current ecext metod:XX class XX");
+
+m1(){}
+m1(){}m1(){}m1(){}m1(){}m1(){}m1(){}m1(){}m1(){}
+
+
+}
+
+Spring JDBC:
+
+
+database
+java code
+
+JDBC
+class.fornae();
+establishing
+creating the statments
+executng the statments
+getting the resutlset
+
+
+libraries/dependedencies
+maven
+any build tool
+
+
+ehcache:
+10 hits--am tyig topull the sam data
+
+stock mar
+
+
+swagger:
+--------
+
+application:
+100 end points
+
+
+
+
+Spring AOP:
+----------
+m1(){
+
+
+}
+"packahe.*.*"
+
+
+ Chain of filters:
+ ----------------
+ Request
+ Response:
+ 
+
+
+
+https://vc.larksuite.com/w/meeting/511377920?lang=en-US
+input/payload/request:
+511377920
+
+output/resonse/responepayload:
+
+filter1(){
+}
+
+Authenticationfilter(request,response){
+thrw excpetion()
+}
+
+
+Rest template:
+-------------
+
+
+producer application(Paytm)
+https://vc.larksuite.com/w/meeting/511377920?lang=en-US
+
+input/payload/request
+output/resonse/responepayload(200,staus)
+restte.call amazon
+
+
+
+Consumer application(amapozon)
+https://vc.larksuite.com/w/meeting/511377920?lang=en-US
+
+input/payload/request
+output/resonse/responepayload(200,staus)
+restte.call paytm
+
+
+
+
+7.	Liquibase(developes wil not be worjing on this)
+
+------------
+x project mysql/oracle/h2
+
+
+8.	Application DR  along with DB (ths is just an eplanation we cant try any example)
+
+Disater Recovery
+
+physical servers
+
+x ---->multipe servers 
+abcd(cloud   amazon web sercices/google cloud service/mircosoft azure/websep)
+
+defg
+
+
+Application
+
+facebook application
+
+code---->compile---->build(.jar/.zip/.war/.tar)----->deployment -->some application server(apache tomcat)--->publi be ale to access u appp
+packaing in pom.xml
+
+Maven
+pom.xml
+	
+
+Spring security:
+----------------
+1.	Oatuh2 Concepts(network and security)
+---------------------
+x application
+registaration of your profile
+name
+addvancemail
+
+
+socail website or application(gmail/facebook/linkedin/twitter)
+
+
+
+2.	API Gateway- wso2 (Basic)
+
+www.abc.com/w/meeting/511377920
+facebook.com
+
+development--http://localhost:5000/appname/511377920
+
+
+
+
+
+
+6.	Spring Boot Security :
+-----------------------
+
+http://localhost:5000/appname/511377920
+
+secutiy(usernae/pwd)
+
+
+
+Spring boot core concepts:
+---------------------------
+3.	Micro Services:
+
+hospital managent system
+doctore
+
+patienns
+
+staff
+
+medicine
+
+inpatients
+
+billing
+
+outpi
+
+single app(monolith aoolication)
+
+
+4.	Spring BootCore Concepts - Actuator ,JPA Repository(JPA), Logging ,Rest Annotation, Understanding the Spring Boot auto configuration, Rest Annotation with Relation DB
+
+@Enity
+@Coulmn
+@tables
+@repository
+@transactional
+
+banking application
+
+x account--deposting 100 into y
+y account--100 to be credited from x
+
+
+
+x---->y,z,a,vd
+
+transactonal managnent
+Anthony( 9:48)--100 debit failed
+Sampath()--100 credit filed
+
+
+
+Actuator :
+----------
+dev/sit/qa/uat/production/dr
+
+10 apps running in prod
+
+ww.ddsf.com/actuator/health
+
+
+JPA Repository(JPA):
+-------------------
+JDBC 
+CRUD
+
+framework(JPA)
+all the basicqueries
+create the tables/generate
+
+queries
+CRUD
+
+Rest Annotation:
+---------------
+servlets/soap services(XML based code)/rest api or restfull web services json,xml,text/spring /spring boot
+
+data formats
+
+text formats
+java
+html
+
+JSON format
+
+class Student{
+int age;
+String anme;
+
+
+}
+
+
+list<Student>
+
+Colletion framework
+
+LISt
+SET
+MAp
+
+JSON
+
+
+[
+{
+"age":"27",
+"name":"Anthony"
+
+
+},
+{
+"age":"26",
+"name":"xyz"
+
+
+}
+]
+
+annotations:
+-----------
+
+
+
+
+@Path("http://localhost:1234/college/students/list")
+@GET
+@Consumes(type of format)
+@Produces(type of frmat)
+public List<Students> gwtStudents(){
+
+
+
+
+}
+
+
+
+
+@GET
+@POST
+@PUT
+@DELETE
+
+
+
+@Produces
+@Consumes
+@Path
+
+select * from tablename;(GET)
+
+insert into tabes(wef	q3f);(POST)
+
+update tables ane set (PUT)
+
+standards
+
+@RestCntroller
+@Service
+
+
+
+
+
+
+
+Differnt topics under addvance java:
+----------------------------------
+5.	SLF4J,Spring JDBC , hikari connection pool , ehcache ,swagger,Spring AOP , Chain of filters ,Rest template 
+
+producer 
+consumer
+
+condition1().condition2().condition();
+
+Steaming cncepts:
+-----------------
+kafka with DR plan 
+10.	Streaming API framework  
+11.	Non Blocking IO with Spring Boot 2
+
+
+incoming request(publisher) ----xx----mechanisim to process income request(subscriber)
+
+any chat application
+
+grouchat
+----------
+publihing the nessage
+
+rabbit mq/active mq
+
+netflix
+
+
+publihser and subscriber technique
+
+
+
+
+
+
+kafka server
+zookeeper server
+topics
+producers
+consuers
+
+some pre requisitse:
+---------------------
+1. rest api/rstull web services/mvc/spring mvc/spring
+boiler plate code(same)
+
+
+
+we try to create or write endpoints/apis/services
+https://vc.larksuite.com/w/meeting/511377920?lang=en-US
+
+
+mobile based apps
+web based apps------
+desktop apps
+
+main(){
+
+}
+
+core java
+
+system A          Susyetm B
+gta vicecity
+
+CURD operations
+Create
+Update
+Read
+Delete
+
+Table:
+------
+Student:
+sid:   sname:   sadd: 
+
+101     Anthony    Hyder
+
+
+
+2.database
+
+
+
+3.controllers
+4.service
+5.any database
+
+
+
+woring stuructre:
+
+we bunch f packages
+
+realtime:
+
+differnt layers(packages)
+
+pogos
+models
+daos
+util
+service/manager
+controllers
+security
+filters
+entity
+
+
+
+---------------------------------------------------
+Maven
+.java----->.class
+
+project n number---->got geerating the .classess  --->command "maven install"
+.jar/.war
+
+first  remove all the exisitn .class ------"maven clean"
+
+
+maven build ----"clean install"
+
+pom.xml
+-------
+<packaging>war<packaging>
+<packaging>jar<packaging>
+
+legacy technologies:
+servlets
+normal core java
+
+
+dependency
+
+
+<dependencies>
+<dependency></dependency>
+
+
+x---->3 ore sub depes(transitive deps)
+
+
+</dependencies>
+
+
+
+
+
+
+
+
+
+
+
+
+
+some application server(tomcat)
+--------------------------------
+tomcat---.jar/.war
+jboss
+weblogic--.ear()
+ibm web sphere
+
+
+
+ide(elispse/sts)
+
+
+java installled(yu atleat java 8)
+
+
+
+calss path set in the envronment variabes
+
+
+
+pakages in java
+
+
+
+com.xyz.projectname
+com.xyz.projectname.pojos
+com.xyz.projectname.models
+
+
+
+db
+
+mysql--3306
+oracle--1821/1521
+
+server
+
+port number
+
+
+junits:
+
+
+addition(it a,int b){
+
+
+
+
+}
+
+
+
+spring web
+
+https://mvnrepository.com/
+
+
+/welcom
+
+Welcomee to be application
+
+
+
+localhost:9091/students/list
+
+select state
+
+
+localhost:9091/votingaapp/states/list
+
+[
+{"name":"Andhra Pradesh"},
+{"name":"Andhra Pradesh"},
+{"name":"Andhra Pradesh"},
+{"name":"Andhra Pradesh"},
+{"name":"Andhra Pradesh"}
+]
+
+
+List<State>
+
+{
+name;
+stateid
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
