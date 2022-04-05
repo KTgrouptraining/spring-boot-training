@@ -1,8 +1,14 @@
 package com.springboottraining.helloworldapp.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class States {
 
+	@Id
 	private int sid;
+	
 	private String name;
 
 	/**
