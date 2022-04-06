@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboottraining.helloworldapp.entities.States;
+import com.springboottraining.helloworldapp.models.StateModel;
 import com.springboottraining.helloworldapp.service.StatesService;
 
 @RestController
@@ -25,7 +26,7 @@ public class StatesController {
 	 */
 
 	@RequestMapping("/states/list")
-	public List<States> getStates() {
+	public List<StateModel> getStates() {
 
 		/*
 		 * List<StateModel> states = new ArrayList<StateModel>(); // class name refname
