@@ -617,6 +617,41 @@ drivers for that db
 
 
 
+tables:
+--------
+
+
+states
+-------
+sid   name
+101    AP
+101    MP
+
+unique/primary key
+
+
+
+--------
+
+interface
+
+
+dev server
+
+sit
+
+qa
+
+uat
+
+hotfix
+
+prod
+
+
+
+
+
 
 
 
