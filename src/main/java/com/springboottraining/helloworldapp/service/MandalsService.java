@@ -35,8 +35,9 @@ public class MandalsService {
 				mandal.setName(mandalsModel.getName());
 				mandal.setState(mandalsModel.getState());
 				mandal.setDistrict(mandalsModel.getDistrict());
-				
-				//add a call to mandals repository to check if the dta is is already existing or not
+
+				// add a call to mandals repository to check if the dta is is already existing
+				// or not
 
 				mandal = mandalsRepository.save(mandal);
 				if (mandal != null) {
@@ -59,19 +60,44 @@ public class MandalsService {
 		return mandalsRepository.findMandalByState(state);
 
 	}
-	
-	public List<Mandals> getMandalsByStateAndDistrict(String state,String district) {
+
+	public List<Mandals> getMandalsByStateAndDistrict(String state, String district) {
 
 		return mandalsRepository.findMandalsByStateAndDistrict(state, district);
 
 	}
-	
+
 	public List<Mandals> getMandals() {
 
 		return (List<Mandals>) mandalsRepository.findAll();
 
 	}
-	
-	
+
+	public String getMandalsbaseOnInputparams(MandalsModel mandalsModel) {
+
+		String result = null;
+
+		Mandals mandal = mandalsRepository.findMandaslDataByCustomQuery(mandalsModel.getState(),
+				mandalsModel.getDistrict(), mandalsModel.getName());
+		if (mandal != null) {
+
+			result = "There is an alredy a record existing with the given details.";
+		} else {
+
+			Mandals mandals = new Mandals();
+			mandals.setName(mandalsModel.getName());
+			mandals.setState(mandalsModel.getState());
+			mandals.setDistrict(mandalsModel.getDistrict());
+
+			mandals = mandalsRepository.save(mandals);
+			if (mandals != null)
+				result = "Record has been stored successfully!";
+			else
+				result = "Record is not stored due to some issue.";
+
+		}
+		return result;
+
+	}
 
 }

@@ -650,6 +650,86 @@ prod
 
 
 
+[
+    {
+        "mid": 1,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    },
+    {
+        "mid": 2,
+        "name": "xyz",
+        "district": "abc",
+        "state": "jhcb"
+    },
+    {
+        "mid": 3,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    },
+    {
+        "mid": 4,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    },
+    {
+        "mid": 5,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    },
+    {
+        "mid": 6,
+        "name": "Atmakur",
+        "district": "Ananthapur",
+        "state": "Andhra Pradesh"
+    },
+    {
+        "mid": 7,
+        "name": "Atmakur",
+        "district": "Ananthapur",
+        "state": "Andhra Pradesh"
+    },
+    {
+        "mid": 101,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    },
+    {
+        "mid": 102,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    },
+    {
+        "mid": 104,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    }
+]
+
+
+www.xyz.com/users/102
+gmail
+https://gmail.com/login/userid/ksdnfn
+
+path variable/path param
+
+@PostMapping("jsbcja/jbau/{value}")
+public void m1(@pathParam("value") String value){
+
+}
+
+xyz.com/users?userid=antony
+&pwd=vnsskf&bal=ksv
+
+
+
 
 
 
