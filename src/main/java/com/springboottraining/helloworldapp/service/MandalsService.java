@@ -1,6 +1,7 @@
 package com.springboottraining.helloworldapp.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -94,6 +95,43 @@ public class MandalsService {
 				result = "Record has been stored successfully!";
 			else
 				result = "Record is not stored due to some issue.";
+
+		}
+		return result;
+
+	}
+
+	public String updateMandals(MandalsModel mandalsModel) {
+		String result = "no result";
+
+		if (mandalsModel != null && (mandalsModel.getMid() != 0)
+				&& (mandalsModel.getName() != null && !mandalsModel.getName().isEmpty())) {
+
+			Optional<Mandals> mandalFromDB = mandalsRepository.findById(mandalsModel.getMid());
+			Mandals mandal = null;
+
+			if (!mandalFromDB.isPresent()) {
+				return "There are no records existing in DB  for updating!";
+			} else {
+				mandal = mandalFromDB.get();
+			}
+
+			if (mandal != null) {
+
+				mandal.setName(mandalsModel.getName());
+
+				mandal = mandalsRepository.save(mandal);
+				if (mandal != null) {
+					result = "Record has been updated successfully!";
+				} else {
+					result = "Record has not updated due to some issue!";
+				}
+
+			}
+			
+//			else {
+//				result = "There are no records existing in DB  for updating!";
+//			}
 
 		}
 		return result;

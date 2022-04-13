@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,20 +45,26 @@ public class MandalsController {
 	public List<Mandals> getMandalsByState(@RequestBody MandalsModel mandalsModel) {
 		return mandalsService.getMandalsByState(mandalsModel.getState());
 	}
-	
+
 	@PostMapping("/mandals/{state}")
 	public List<Mandals> getMandalsByStateUingPathparam(@PathVariable("state") String state) {
 		return mandalsService.getMandalsByState(state);
 	}
-	
+
 	@PostMapping("/mandals/usingqueryparam")
-	public List<Mandals> getMandalsByStateUingQueryParam(@PathParam ("state") String state) {
+	public List<Mandals> getMandalsByStateUingQueryParam(@PathParam("state") String state) {
 		return mandalsService.getMandalsByState(state);
 	}
 
 	@PostMapping("/mandals/stateanddistrict")
 	public List<Mandals> getMandalsByStateAndDistrict(@RequestBody MandalsModel mandalsModel) {
 		return mandalsService.getMandalsByStateAndDistrict(mandalsModel.getState(), mandalsModel.getDistrict());
+
+	}
+
+	@PutMapping("/mandal/update")
+	public String updateMandals(@RequestBody MandalsModel mandalsModel) {
+		return mandalsService.updateMandals(mandalsModel);
 
 	}
 

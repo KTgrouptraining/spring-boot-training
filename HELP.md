@@ -729,6 +729,53 @@ xyz.com/users?userid=antony
 &pwd=vnsskf&bal=ksv
 
 
+@Putmapping
+updating the existing
+
+check if the record is already existing
+then update
+
+pull the records based on primary
+
+if no records then say no records matching for updation
+
+[
+    {
+        "mid": 5,
+        "name": "xyz",
+        "district": "xyz",
+        "state": "jhcb"
+    },
+    {
+        "mid": 6,
+        "name": "Atmakur",
+        "district": "Ananthapur",
+        "state": "Andhra Pradesh"
+    },
+    {
+        "mid": 8,
+        "name": "abcd",
+        "district": "def",
+        "state": "Andhra Pradesh"
+    }
+]
+
+
+
+@DeleteMapping
+deleting the records
+
+
+
+Hopitl project
+
+patients
+reception
+doctors
+
+
+
+
 
 
 
