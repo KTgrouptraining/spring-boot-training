@@ -3,6 +3,8 @@ package com.springboottraining.helloworldapp.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,8 @@ import com.springboottraining.helloworldapp.repository.MandalsRepository;
 
 @Service
 public class MandalsService {
+
+	Logger logger = LoggerFactory.getLogger(MandalsService.class);
 
 	@Autowired
 	private MandalsRepository mandalsRepository;
@@ -102,6 +106,7 @@ public class MandalsService {
 	}
 
 	public String updateMandals(MandalsModel mandalsModel) {
+		logger.debug("Request-----------> {}" + mandalsModel);
 		String result = "no result";
 
 		if (mandalsModel != null && (mandalsModel.getMid() != 0)
@@ -109,6 +114,8 @@ public class MandalsService {
 
 			Optional<Mandals> mandalFromDB = mandalsRepository.findById(mandalsModel.getMid());
 			Mandals mandal = null;
+
+			mandal = mandalFromDB.get();
 
 			if (!mandalFromDB.isPresent()) {
 				return "There are no records existing in DB  for updating!";
@@ -128,7 +135,8 @@ public class MandalsService {
 				}
 
 			}
-			
+			logger.debug("Result {}" + result);
+
 //			else {
 //				result = "There are no records existing in DB  for updating!";
 //			}
@@ -138,4 +146,38 @@ public class MandalsService {
 
 	}
 
+	public String deleteMandal(int mandalId) {
+		String result = null;
+
+		if (mandalId != 0) {
+
+			mandalsRepository.deleteById(mandalId);
+			result = "Recordhas deleted scussessfullly";
+		} else {
+			result = "PLease enter valid value fr deletion";
+		}
+		return result;
+
+	}
+
+	public String deleteMandalByObject(MandalsModel mandalsModel) {
+		String result = "No record is deleted";
+
+		if (mandalsModel != null && mandalsModel.getMid() != 0) {
+
+			Optional<Mandals> optionalmandal = mandalsRepository.findById(mandalsModel.getMid());
+
+			if (optionalmandal.isPresent()) {
+				Mandals mandal = optionalmandal.get();
+
+				mandalsRepository.delete(mandal);
+				result = "Recordhas deleted scussessfullly";
+			} else {
+				result = "PLease enter valid value fr deletion";
+			}
+
+		}
+		return result;
+
+	}
 }

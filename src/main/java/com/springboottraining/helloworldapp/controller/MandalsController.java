@@ -4,7 +4,10 @@ import java.util.List;
 
 import javax.websocket.server.PathParam;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +21,8 @@ import com.springboottraining.helloworldapp.service.MandalsService;
 
 @RestController
 public class MandalsController {
+
+	Logger logger = LoggerFactory.getLogger(MandalsController.class);
 
 	@Autowired
 	private MandalsService mandalsService;
@@ -64,7 +69,17 @@ public class MandalsController {
 
 	@PutMapping("/mandal/update")
 	public String updateMandals(@RequestBody MandalsModel mandalsModel) {
+
+		logger.info("Request:{'}====================info log" + mandalsModel);
+		logger.debug("Request:{'}====================debug log" + mandalsModel);
 		return mandalsService.updateMandals(mandalsModel);
+
+	}
+
+	@DeleteMapping("/mandal/delete")
+	public String deleteMandal(@RequestBody MandalsModel mandalsModel) {
+//		return mandalsService.deleteMandal(mandalsModel.getMid());
+		return mandalsService.deleteMandalByObject(mandalsModel);
 
 	}
 

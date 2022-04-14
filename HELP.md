@@ -776,6 +776,96 @@ doctors
 
 
 
+hwo we can create end points
+
+controllers
+
+service
+
+respository
+
+CRUD operations
+
+data jpa
+
+multiple servers
+dev
+sit
+uat
+qa
+dr
+prod
+hotfix
+
+
+profile
+
+db
+
+
+service
+
+
+resposity
+
+frameork
+
+
+
+rest api/api/servic/endpoint/url
+https://vc.larksuite.com/w/meeting/511377920?lang=en-US
+
+GET--retrieval
+POST-insert
+PUT-updation
+DELETE-deletion
+
+@RequestMapping(value="/w/meeting/511377920?lang=en-US",produces="aplication/json",consumes="aplication/json",requestMethod.GET)
+int a;
+
+@RequestMapping(value="/w/meeting/511377920?lang=en-IN")
+
+
+Conteolller----->service/manager----->repositry---->enties---->db
+
+
+Conteolller-----<service/manager<-----repositry<----enties<----db
+
+
+
+servelts
+servelts
+servelts
+servelts
+servelts
+servelts
+servelts
+
+----------
+
+sopa web services--xml/.xsd/
+
+
+-------------
+
+rest full web services/rest api
+
+
+------------------
+
+spring
+
+-------------------
+
+spring boot
+
+
+
+
+
+
+
+
 
 
 
