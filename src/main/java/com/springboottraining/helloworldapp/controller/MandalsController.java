@@ -7,6 +7,8 @@ import javax.websocket.server.PathParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboottraining.helloworldapp.entities.Mandals;
+import com.springboottraining.helloworldapp.models.Countries;
 import com.springboottraining.helloworldapp.models.MandalsModel;
 import com.springboottraining.helloworldapp.service.MandalsService;
 
@@ -29,8 +32,9 @@ public class MandalsController {
 
 	@PostMapping(value = "/mandals/save", consumes = "application/json", produces = "application/json")
 //	@PostMapping("/mandals/save")
-	public String saveMandal(@RequestBody MandalsModel mandalsModel) {
-		return mandalsService.saveMandal(mandalsModel);
+	public ResponseEntity<String> saveMandal(@RequestBody MandalsModel mandalsModel) {
+		logger.info("==========>Inut Request"+mandalsModel);
+		return new ResponseEntity<String>(mandalsService.saveMandal(mandalsModel),HttpStatus.CREATED);
 
 	}
 
@@ -41,8 +45,20 @@ public class MandalsController {
 	}
 
 	@GetMapping("/mandals")
-	public List<Mandals> getMandals() {
-		return mandalsService.getMandals();
+	public ResponseEntity<List<Mandals>> getMandals() throws Exception {
+		/*if(true){
+			throw new Exception();
+		}*/
+		
+		logger.info("==================>Am inside getMandals() method");
+		
+		return new ResponseEntity<List<Mandals>>(mandalsService.getMandals(), HttpStatus.OK);
+
+	}
+	
+	@GetMapping("/mandals/countries")
+	public Object getCountries() {
+		return mandalsService.getCountries();
 
 	}
 

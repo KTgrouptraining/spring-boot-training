@@ -1,12 +1,19 @@
 package com.springboottraining.helloworldapp.service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.springboottraining.helloworldapp.entities.Mandals;
 import com.springboottraining.helloworldapp.models.MandalsModel;
@@ -19,6 +26,9 @@ public class MandalsService {
 
 	@Autowired
 	private MandalsRepository mandalsRepository;
+
+	@Autowired
+	private RestTemplate restTemplate;
 
 	public String saveMandal(MandalsModel mandalsModel) {
 
@@ -75,6 +85,16 @@ public class MandalsService {
 	public List<Mandals> getMandals() {
 
 		return (List<Mandals>) mandalsRepository.findAll();
+
+	}
+
+	public String getCountries() {
+		HttpHeaders headers = new HttpHeaders();
+		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		HttpEntity<String> entity = new HttpEntity<String>(headers);
+
+		return restTemplate.exchange("http://localhost:9091/countries",
+				HttpMethod.GET, entity, String.class).getBody();
 
 	}
 

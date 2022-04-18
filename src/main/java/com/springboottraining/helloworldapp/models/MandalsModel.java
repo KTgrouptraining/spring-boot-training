@@ -63,4 +63,15 @@ public class MandalsModel {
 		this.state = state;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "MandalsModel [mid=" + mid + ", name=" + name + ", district="
+				+ district + ", state=" + state + "]";
+	}
+	
+	
+
 }

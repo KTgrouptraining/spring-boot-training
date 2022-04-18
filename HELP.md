@@ -860,6 +860,28 @@ spring
 spring boot
 
 
+-------
+logging levels
+
+trace
+debug
+info
+warning
+error
+
+
+Centrl logging system
+
+Splunk
+kibana
+
+
+4xx--client side erro
+5xx
+2xx
+
+
+
 
 
 
