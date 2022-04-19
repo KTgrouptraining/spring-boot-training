@@ -1,0 +1,102 @@
+2022-04-18 09:19:26 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:19:26 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:19:26 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:19:29 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 3.164 seconds (JVM running for 193.52)
+2022-04-18 09:23:06 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:23:06 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:23:06 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:23:08 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.573 seconds (JVM running for 412.367)
+2022-04-18 09:37:47 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:37:47 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:37:47 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:37:49 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.797 seconds (JVM running for 1293.146)
+2022-04-18 09:38:01 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:38:01 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:38:01 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:38:02 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.11 seconds (JVM running for 1306.607)
+2022-04-18 09:38:09 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:38:09 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:38:09 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:38:10 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.043 seconds (JVM running for 1314.733)
+2022-04-18 09:42:49 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:42:49 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:42:49 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:42:50 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.374 seconds (JVM running for 1594.432)
+2022-04-18 09:43:21 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:43:21 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:43:21 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:43:22 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.104 seconds (JVM running for 1626.11)
+2022-04-18 09:44:29 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:44:29 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:44:29 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:44:30 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.053 seconds (JVM running for 1694.185)
+2022-04-18 09:44:38 [http-nio-9092-exec-2] INFO  c.s.h.controller.MandalsController -
+				==================>Am inside getMandals() method
+2022-04-18 09:45:44 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:45:44 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:45:44 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:45:46 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.589 seconds (JVM running for 1770.482)
+2022-04-18 09:46:03 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:46:03 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:46:03 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:46:03 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 0.959 seconds (JVM running for 1787.94)
+2022-04-18 09:55:41 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7840 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 09:55:41 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 09:55:41 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 09:55:42 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Started StateGovApplication in 1.019 seconds (JVM running for 2366.397)
+2022-04-18 23:54:31 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 11556 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 23:54:31 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 23:54:31 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
+2022-04-18 23:58:50 [restartedMain] INFO  c.s.h.StateGovApplication -
+				Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 11124 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-18 23:58:50 [restartedMain] DEBUG c.s.h.StateGovApplication -
+				Running with Spring Boot v2.6.5, Spring v5.3.17
+2022-04-18 23:58:50 [restartedMain] INFO  c.s.h.StateGovApplication -
+				The following 1 profile is active: "sql"
