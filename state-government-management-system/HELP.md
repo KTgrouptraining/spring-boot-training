@@ -900,6 +900,21 @@ mic2
 save/countries
 
 FeignClient
+RestTempla
+
+
+load  balancer
+
+juntuh/osam
+
+10 servers
+
+sate-->feign--->base irl---->actual url---->cetral---gett he data
+
+
+
+
+
 
 
 

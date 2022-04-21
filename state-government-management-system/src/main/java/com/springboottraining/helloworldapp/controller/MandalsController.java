@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboottraining.helloworldapp.entities.Mandals;
+import com.springboottraining.helloworldapp.feign.client.CountriesFeignClient;
 import com.springboottraining.helloworldapp.models.Countries;
 import com.springboottraining.helloworldapp.models.MandalsModel;
 import com.springboottraining.helloworldapp.service.MandalsService;
@@ -29,6 +30,8 @@ public class MandalsController {
 
 	@Autowired
 	private MandalsService mandalsService;
+	@Autowired
+	private CountriesFeignClient countriesFeignClient;
 
 	@PostMapping(value = "/mandals/save", consumes = "application/json", produces = "application/json")
 //	@PostMapping("/mandals/save")
@@ -62,9 +65,21 @@ public class MandalsController {
 
 	}
 	
+	
+	@GetMapping("feign/mandals/countries")
+	public List<Countries> getCountriesUingFeignClient() {
+		return countriesFeignClient.getCountries();
+
+	}
+	
 	@PostMapping("/mandals/save/countries")
 	public String saveCountries(@RequestBody Countries country) {
 		return mandalsService.saveCountry(country);
+
+	}
+	@PostMapping("/feign/mandals/save/countries")
+	public String saveCountriesUsingFeign(@RequestBody Countries country) {
+		return countriesFeignClient.saveCountries(country);
 
 	}
 
