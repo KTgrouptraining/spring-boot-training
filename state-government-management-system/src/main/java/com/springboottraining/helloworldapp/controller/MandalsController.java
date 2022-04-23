@@ -23,6 +23,8 @@ import com.springboottraining.helloworldapp.models.Countries;
 import com.springboottraining.helloworldapp.models.MandalsModel;
 import com.springboottraining.helloworldapp.service.MandalsService;
 
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+
 @RestController
 public class MandalsController {
 

@@ -911,6 +911,134 @@ juntuh/osam
 
 sate-->feign--->base irl---->actual url---->cetral---gett he data
 
+swagger (conecept)
+
+@PostMapping(value = "/mandals/save/data")
+	public String saveMandalIfnotExisting(@RequestBody MandalsModel mandalsModel) {
+		return mandalsService.getMandalsbaseOnInputparams(mandalsModel);
+
+	}
+	
+	URL:
+	ENdpoint name
+	Iputs
+	type of the inputs
+	return type
+	status codes
+	
+	
+	
+	<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		
+		/swagger-ui.html
+		/v3/api-docs
+		
+		
+		kafka
+		avtive q
+		
+		producer and consumer concepts
+		publisher and subscriber
+		
+		youtube
+		
+		subscriber
+		
+		topic ---name
+		
+		kafka
+		
+		kafka server
+		zookeeper server
+		topics
+		
+		ott
+		
+		producer console----we can publish the messages
+		consumer consle-- we will be bale to receive the message hich are pusblished
+		
+		
+		how we can run thi in locaal
+		
+		
+		
+		spring boot --framework---active mq/kafka/rabiit mq
+		kafka is 1 conce
+		
+		
+		
+		zookeeper server
+		kafka server			
+		
+		topics
+		
+		producer console--pusbliher
+		
+		consumer console--audience
+		
+		
+		
+Apache Kafka
+https://kafka.apache.org
+
+
+post message in topic
+>kafka-console-producer.bat --broker-list localhost:9092 --topic testtopic
+
+Read message from topic
+>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic testtopic --from-beginning
+
+Create toopic
+>kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic testtopic1
+
+start zookeeper server
+>zookeeper-server-start.bat D:\softwares\kafka_2.13-3.1.0\config\zookeeper.properties
+
+start kafka server
+>kafka-server-start.bat D:\softwares\kafka_2.13-3.1.0\config\server.properties
+
+
+
+cheque deposit
+		
+		
+		onwhich port ur kafka server is running
+		topic
+		
+		write code to read meessages from topic mentioned  
+		process them
+		
+		and the 
+		
+		store
+		
+		 micro services
+		 1--prduces
+		 2--consumer
+		 
+	{
+	"studentnam"
+	}
+	
+	reserved port number
+	
+	thyme leaf(ui relted stuff)
+	
+	mvc--
+	model
+	view(user interface)react.js/angular/java script
+	controller
+	
+		
+		w
+		
+		
+		
+
 
 
 

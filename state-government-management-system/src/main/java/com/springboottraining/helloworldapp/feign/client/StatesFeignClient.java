@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.springboottraining.helloworldapp.models.Countries;
 
-@FeignClient(url="http://localhost:9093",name="COUNTRIES-CLIENT")
+@FeignClient(url="http://localhost:9093",name="STATES-CLIENT")
 public interface StatesFeignClient {
 	
 	@GetMapping("/states")
