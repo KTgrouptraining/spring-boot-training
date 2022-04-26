@@ -1037,6 +1037,29 @@ cheque deposit
 		w
 		
 		
+		Collections:
+		List
+		Set
+		Map
+		
+		Lst/Set ref= new ArrayList/HastSet<>();
+		ref.add();
+		
+		Map<Key,Value> ref  new HashMap<>k,V();
+		ref.put
+		
+		
+		
+		www.sbi.com/users/addaccount
+		www.sbi.com/users/deleteaccount
+		www.sbi.com/users/updateaccount
+		
+		
+		
+		
+		
+		
+		
 		
 
 
