@@ -1,0 +1,4 @@
+com\javatraining\kafka\springbootkafkaproducerexample\config\KakfaConfiguration.class
+com\javatraining\kafka\springbootkafkaproducerexample\resource\UserResource.class
+com\javatraining\kafka\springbootkafkaproducerexample\model\User.class
+com\javatraining\kafka\springbootkafkaproducerexample\SpringBootKafkaProducerExampleApplication.class
