@@ -1055,6 +1055,14 @@ cheque deposit
 		www.sbi.com/users/updateaccount
 		
 		
+		if kafka server not running add the below in system and user variabls 
+		
+		%SystemRoot%\System32\Wbem;%SystemRoot%\System32\;SystemRoot%
+		
+		
+		https://stackoverflow.com/questions/45524750/kafka-server-not-returning-anything
+		
+		
 		
 		
 		
