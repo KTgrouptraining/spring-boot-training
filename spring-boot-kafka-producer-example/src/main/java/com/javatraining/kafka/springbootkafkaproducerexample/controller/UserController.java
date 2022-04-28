@@ -17,16 +17,21 @@ public class UserController {
 
 	@Autowired
 	private KafkaTemplate<String, User> kafkaTemplate;
-	@Autowired
-	private KafkaTemplate<String, String> kafkaTemplateForStringObject;
+	
+	/*@Autowired
+	private KafkaTemplate<String, String> kafkaTemplateForStringObject;*/
 
-	private static final String TOPIC = "testtopic";
+	private static final String USSER_TOPIC = "usertopic";
+	private static final String TEST_TOPIC = "testtopic";
 
 	@GetMapping("/publish/{name}")
 	public String post(@PathVariable("name") final String name) {
-		kafkaTemplateForStringObject.send(TOPIC, "Hello+======>" + name+"Posted on :"+new Date());
+		//public String post(@requestbods object) {
+		//image amazon3 s3
+		//url:
+//		kafkaTemplateForStringObject.send(TEST_TOPIC, "Hello+======>" + name+" Posted on :"+new Date());		
 
-//		kafkaTemplate.send(TOPIC, new User(name, "Technology", 12000L));
+		kafkaTemplate.send(USSER_TOPIC, new User(name, "Technology", 12000L));
 
 		return "Published successfully";
 	}
