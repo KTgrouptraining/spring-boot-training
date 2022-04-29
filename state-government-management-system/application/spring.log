@@ -1,12 +1,645 @@
-2022-04-22 09:23:20.397  INFO 420 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 420 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
-2022-04-22 09:23:20.411  INFO 420 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
-2022-04-22 09:23:20.609  INFO 420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-22 09:23:20.611  INFO 420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-22 09:23:23.737  WARN 420 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'COUNTRIES-CLIENT.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] for bean 'COUNTRIES-CLIENT.FeignClientSpecification': There is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] bound.
-2022-04-22 09:23:23.807  INFO 420 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+2022-04-29 08:40:45.611  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 8724 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 08:40:46.061  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 08:40:47.741  INFO 8724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-29 08:40:47.743  INFO 8724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-29 08:41:20.106  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 08:41:21.335  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 943 ms. Found 2 JPA repository interfaces.
+2022-04-29 08:41:23.737  INFO 8724 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5427b792-9c33-3cd2-910a-e1d5c408076f
+2022-04-29 08:41:41.074  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 08:41:41.491  INFO 8724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 08:41:41.492  INFO 8724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 08:41:42.756  INFO 8724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 08:41:42.757  INFO 8724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 55009 ms
+2022-04-29 08:41:44.870  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-29 08:41:56.588  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-29 08:41:56.688  INFO 8724 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 08:41:58.236  INFO 8724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 08:41:58.706  INFO 8724 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-29 08:42:02.189  INFO 8724 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-29 08:42:05.101  INFO 8724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 08:42:26.666  INFO 8724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 08:42:26.927  INFO 8724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:42:33.127  WARN 8724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 08:42:34.516  INFO 8724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 08:42:44.579  INFO 8724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-29 08:42:45.534  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 08:42:46.119  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 139.574 seconds (JVM running for 167.36)
+2022-04-29 08:47:21.409  INFO 8724 --- [http-nio-9093-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-29 08:47:21.411  INFO 8724 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-29 08:47:21.418  INFO 8724 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-04-29 08:47:21.901  WARN 8724 --- [http-nio-9093-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2022-04-29 08:51:02.088  INFO 8724 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:51:03.254  INFO 8724 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-29 08:51:03.863  INFO 8724 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-29 08:51:41.349  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 8724 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 08:51:41.349  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 08:51:41.944  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 08:51:41.959  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2022-04-29 08:51:42.051  INFO 8724 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5427b792-9c33-3cd2-910a-e1d5c408076f
+2022-04-29 08:51:42.196  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 08:51:42.197  INFO 8724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 08:51:42.197  INFO 8724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 08:51:42.309  INFO 8724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 08:51:42.309  INFO 8724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2022-04-29 08:51:42.357  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-04-29 08:51:42.603  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-04-29 08:51:42.604  INFO 8724 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 08:51:42.674  INFO 8724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 08:51:42.684  INFO 8724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 08:51:43.126  INFO 8724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 08:51:43.127  INFO 8724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:51:43.593  WARN 8724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 08:51:43.655  INFO 8724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 08:51:45.164  INFO 8724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-29 08:51:45.209  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 08:51:45.639  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 4.885 seconds (JVM running for 706.88)
+2022-04-29 08:51:45.645  INFO 8724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
+      - Log File found logging.file.path application (LogFileWebEndpointAutoConfiguration.LogFileCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-04-29 08:51:57.995  INFO 8724 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:51:58.003  INFO 8724 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-04-29 08:51:58.028  INFO 8724 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-04-29 08:51:59.815  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 8724 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 08:51:59.815  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 08:52:00.575  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 08:52:00.584  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2022-04-29 08:52:00.683  INFO 8724 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b2154592-3844-39e8-a440-f8fc55706b98
+2022-04-29 08:52:01.682  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 08:52:01.684  INFO 8724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 08:52:01.684  INFO 8724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 08:52:01.922  INFO 8724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 08:52:01.922  INFO 8724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2104 ms
+2022-04-29 08:52:02.020  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-04-29 08:52:02.559  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-04-29 08:52:02.559  INFO 8724 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 08:52:02.627  INFO 8724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 08:52:02.635  INFO 8724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 08:52:04.753  INFO 8724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 08:52:04.754  INFO 8724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:52:04.960  WARN 8724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 08:52:05.027  INFO 8724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 08:52:06.825  INFO 8724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoint(s) beneath base path '/actuator'
+2022-04-29 08:52:06.867  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 08:52:07.012  INFO 8724 --- [http-nio-9093-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-29 08:52:07.013  INFO 8724 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-29 08:52:07.017  INFO 8724 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-04-29 08:52:07.345  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 8.333 seconds (JVM running for 728.586)
+2022-04-29 08:52:07.351  INFO 8724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   AuditEventsEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.auditevents.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   BeansEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.beans.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   CachesEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.caches.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CommonsClientAutoConfiguration.ActuatorConfiguration#featuresEndpoint:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.features.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   ConditionsReportEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.conditions.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   ConfigurationPropertiesReportEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.configprops.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   EnvironmentEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.env.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   HealthEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.health.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   HeapDumpWebEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.heapdump.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   HttpTraceEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.httptrace.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   InfoEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.info.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   LogFileWebEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.logfile.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   LoggersEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.loggers.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   MappingsEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.mappings.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   MetricsEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.metrics.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'io.micrometer.core.annotation.Timed' (OnClassCondition)
+
+   RefreshEndpointAutoConfiguration.RefreshEndpointConfiguration#refreshEndpoint:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.refresh.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+      Matched:
+         - @ConditionalOnBean (types: org.springframework.cloud.context.refresh.ContextRefresher; SearchStrategy: all) found bean 'configDataContextRefresher'; @ConditionalOnMissingBean (types: org.springframework.cloud.endpoint.RefreshEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ScheduledTasksEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.scheduledtasks.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+   ThreadDumpEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no property management.endpoint.threaddump.enabled found so using user defined default from management.endpoints.enabled-by-default (OnAvailableEndpointCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-04-29 08:52:08.224  INFO 8724 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:52:08.225  INFO 8724 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-04-29 08:52:08.236  INFO 8724 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-04-29 08:52:09.288  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 8724 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 08:52:09.288  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 08:52:10.057  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 08:52:10.076  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2022-04-29 08:52:10.178  INFO 8724 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b2154592-3844-39e8-a440-f8fc55706b98
+2022-04-29 08:52:10.331  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 08:52:10.332  INFO 8724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 08:52:10.332  INFO 8724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 08:52:10.372  INFO 8724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 08:52:10.372  INFO 8724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2022-04-29 08:52:10.429  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-04-29 08:52:10.527  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-04-29 08:52:10.527  INFO 8724 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 08:52:10.587  INFO 8724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 08:52:10.603  INFO 8724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 08:52:10.766  INFO 8724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 08:52:10.767  INFO 8724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:52:11.002  WARN 8724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 08:52:11.069  INFO 8724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 08:52:12.492  INFO 8724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoint(s) beneath base path '/actuator'
+2022-04-29 08:52:12.532  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 08:52:12.881  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 4.149 seconds (JVM running for 734.123)
+2022-04-29 08:52:12.884  INFO 8724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-29 08:52:13.897  INFO 8724 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:52:14.026  INFO 8724 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-04-29 08:52:14.040  INFO 8724 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-04-29 08:52:14.980  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 8724 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 08:52:14.980  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 08:52:15.493  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 08:52:15.553  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2022-04-29 08:52:15.643  INFO 8724 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=59ed3eae-d635-36f7-bc39-8f631b441cab
+2022-04-29 08:52:15.765  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 08:52:15.767  INFO 8724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 08:52:15.767  INFO 8724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 08:52:15.944  INFO 8724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 08:52:15.945  INFO 8724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 960 ms
+2022-04-29 08:52:16.003  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-04-29 08:52:16.049  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-04-29 08:52:16.050  INFO 8724 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 08:52:16.139  INFO 8724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 08:52:16.149  INFO 8724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 08:52:16.297  INFO 8724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 08:52:16.298  INFO 8724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:52:16.517  WARN 8724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 08:52:16.548  INFO 8724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 08:52:18.339  INFO 8724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-29 08:52:18.379  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 08:52:18.940  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 4.369 seconds (JVM running for 740.181)
+2022-04-29 08:52:18.948  INFO 8724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   AuditEventsEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   BeansEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   BeansEndpointAutoConfiguration#beansEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.beans.BeansEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   CachesEndpointAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   CachesEndpointAutoConfiguration#cachesEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.cache.CachesEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   CommonsClientAutoConfiguration.ActuatorConfiguration#featuresEndpoint matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   ConditionsReportEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   ConditionsReportEndpointAutoConfiguration#conditionsReportEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpoint; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ConfigurationPropertiesReportEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   ConfigurationPropertiesReportEndpointAutoConfiguration#configurationPropertiesReportEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   EnvironmentEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   EnvironmentEndpointAutoConfiguration#environmentEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.env.EnvironmentEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
+
+   HealthEndpointConfiguration#healthContributorRegistry matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.health.HealthContributorRegistry; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointConfiguration#healthEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.health.HealthEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointConfiguration#healthEndpointGroups matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.health.HealthEndpointGroups; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointConfiguration#healthHttpCodeStatusMapper matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.health.HttpCodeStatusMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointConfiguration#healthStatusAggregator matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.health.StatusAggregator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointWebExtensionConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
+      - @ConditionalOnBean (types: org.springframework.boot.actuate.health.HealthEndpoint; SearchStrategy: all) found bean 'healthEndpoint' (OnBeanCondition)
+
+   HealthEndpointWebExtensionConfiguration#healthEndpointWebExtension matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.health.HealthEndpointWebExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointWebExtensionConfiguration.MvcAdditionalHealthEndpointPathsConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
+      - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
+
+   HeapDumpWebEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   HeapDumpWebEndpointAutoConfiguration#heapDumpWebEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.management.HeapDumpWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpTraceEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   InfoEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   InfoEndpointAutoConfiguration#infoEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.info.InfoEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LogFileWebEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
+      - Log File found logging.file.path application (LogFileWebEndpointAutoConfiguration.LogFileCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LoggersEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   LoggersEndpointAutoConfiguration#loggersEndpoint matched:
+      - Logging System enabled (LoggersEndpointAutoConfiguration.OnEnabledLoggingSystemCondition)
+      - @ConditionalOnBean (types: org.springframework.boot.logging.LoggingSystem; SearchStrategy: all) found bean 'springBootLoggingSystem'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LoggersEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MappingsEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   MappingsEndpointAutoConfiguration.ServletWebConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   MappingsEndpointAutoConfiguration.ServletWebConfiguration.SpringMvcConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
+
+   MetricsEndpointAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'io.micrometer.core.annotation.Timed' (OnClassCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   MetricsEndpointAutoConfiguration#metricsEndpoint matched:
+      - @ConditionalOnBean (types: io.micrometer.core.instrument.MeterRegistry; SearchStrategy: all) found bean 'simpleMeterRegistry'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.metrics.MetricsEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   PauseResumeEndpointsConfiguration#pauseEndpoint matched:
+      - @ConditionalOnBean (types: org.springframework.cloud.context.restart.RestartEndpoint; SearchStrategy: all) found bean 'restartEndpointWithoutIntegration'; @ConditionalOnMissingBean (types: org.springframework.cloud.context.restart.RestartEndpoint$PauseEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   PauseResumeEndpointsConfiguration#resumeEndpoint matched:
+      - @ConditionalOnBean (types: org.springframework.cloud.context.restart.RestartEndpoint; SearchStrategy: all) found bean 'restartEndpointWithoutIntegration'; @ConditionalOnMissingBean (types: org.springframework.cloud.context.restart.RestartEndpoint$ResumeEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   RefreshEndpointAutoConfiguration.RefreshEndpointConfiguration#refreshEndpoint matched:
+      - @ConditionalOnBean (types: org.springframework.cloud.context.refresh.ContextRefresher; SearchStrategy: all) found bean 'configDataContextRefresher'; @ConditionalOnMissingBean (types: org.springframework.cloud.endpoint.RefreshEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   RestartEndpointWithoutIntegrationConfiguration#restartEndpointWithoutIntegration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.cloud.context.restart.RestartEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ScheduledTasksEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   ScheduledTasksEndpointAutoConfiguration#scheduledTasksEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ShutdownEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   ShutdownEndpointAutoConfiguration#shutdownEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.context.ShutdownEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ThreadDumpEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.jmx.exposure' property (OnAvailableEndpointCondition)
+
+   ThreadDumpEndpointAutoConfiguration#dumpEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.management.ThreadDumpEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   AuditEventsEndpointAutoConfiguration#auditEventsEndpoint:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.boot.actuate.audit.AuditEventRepository; SearchStrategy: all) did not find any beans of type org.springframework.boot.actuate.audit.AuditEventRepository (OnBeanCondition)
+
+   CachesEndpointAutoConfiguration#cachesEndpointWebExtension:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no 'management.endpoints' property marked it as exposed (OnAvailableEndpointCondition)
+      Matched:
+         - @ConditionalOnBean (types: org.springframework.boot.actuate.cache.CachesEndpoint; SearchStrategy: all) found bean 'cachesEndpoint'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.cache.CachesEndpointWebExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ConfigurationPropertiesReportEndpointAutoConfiguration#configurationPropertiesReportEndpointWebExtension:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no 'management.endpoints' property marked it as exposed (OnAvailableEndpointCondition)
+      Matched:
+         - @ConditionalOnBean (types: org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint; SearchStrategy: all) found bean 'configurationPropertiesReportEndpoint'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpointWebExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   EnvironmentEndpointAutoConfiguration#environmentEndpointWebExtension:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no 'management.endpoints' property marked it as exposed (OnAvailableEndpointCondition)
+      Matched:
+         - @ConditionalOnBean (types: org.springframework.boot.actuate.env.EnvironmentEndpoint; SearchStrategy: all) found bean 'environmentEndpoint'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.env.EnvironmentEndpointWebExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HealthEndpointReactiveWebExtensionConfiguration:
+      Did not match:
+         - did not find reactive web application classes (OnWebApplicationCondition)
+
+   HealthEndpointWebExtensionConfiguration.JerseyAdditionalHealthEndpointPathsConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.glassfish.jersey.server.ResourceConfig' (OnClassCondition)
+
+   HttpTraceEndpointAutoConfiguration#httpTraceEndpoint:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.boot.actuate.trace.http.HttpTraceRepository; SearchStrategy: all) did not find any beans of type org.springframework.boot.actuate.trace.http.HttpTraceRepository (OnBeanCondition)
+
+   MappingsEndpointAutoConfiguration.ReactiveWebConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.DispatcherHandler' (OnClassCondition)
+
+   ReactiveHealthEndpointConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-04-29 08:52:19.686  INFO 8724 --- [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:52:19.688  INFO 8724 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-04-29 08:52:19.692  INFO 8724 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-04-29 08:52:20.739  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 8724 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 08:52:20.739  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 08:52:21.322  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 08:52:21.333  INFO 8724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2022-04-29 08:52:21.419  INFO 8724 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=59ed3eae-d635-36f7-bc39-8f631b441cab
+2022-04-29 08:52:21.629  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 08:52:21.630  INFO 8724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 08:52:21.630  INFO 8724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 08:52:21.736  INFO 8724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 08:52:21.737  INFO 8724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 995 ms
+2022-04-29 08:52:21.800  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-04-29 08:52:21.842  INFO 8724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-04-29 08:52:21.843  INFO 8724 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 08:52:21.918  INFO 8724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 08:52:21.927  INFO 8724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 08:52:22.027  INFO 8724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 08:52:22.030  INFO 8724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:52:22.363  WARN 8724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 08:52:22.413  INFO 8724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 08:52:24.091  INFO 8724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-29 08:52:24.132  INFO 8724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 08:52:24.509  INFO 8724 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 4.263 seconds (JVM running for 745.75)
+2022-04-29 08:52:24.513  INFO 8724 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-29 08:52:32.396  INFO 8724 --- [http-nio-9093-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-29 08:52:32.397  INFO 8724 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-29 08:52:32.403  INFO 8724 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-04-29 08:53:21.281  INFO 8724 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-04-29 08:53:21.848  INFO 8724 --- [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-04-29 08:53:21.964  INFO 8724 --- [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:53:21.970  INFO 8724 --- [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-04-29 08:53:21.985  INFO 8724 --- [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-04-29 08:54:13.755  INFO 1604 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 1604 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 08:54:13.765  INFO 1604 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 08:54:14.340  INFO 1604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-29 08:54:14.341  INFO 1604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-29 08:54:23.959  INFO 1604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 08:54:24.316  INFO 1604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 287 ms. Found 2 JPA repository interfaces.
+2022-04-29 08:54:25.325  INFO 1604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=59ed3eae-d635-36f7-bc39-8f631b441cab
+2022-04-29 08:54:31.196  INFO 1604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 08:54:31.353  INFO 1604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 08:54:31.354  INFO 1604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 08:54:31.681  INFO 1604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 08:54:31.682  INFO 1604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 17338 ms
+2022-04-29 08:54:32.561  INFO 1604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-29 08:54:35.631  INFO 1604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-29 08:54:35.715  INFO 1604 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 08:54:37.083  INFO 1604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 08:54:37.698  INFO 1604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-29 08:54:42.531  INFO 1604 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-29 08:54:43.676  INFO 1604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 08:54:49.961  INFO 1604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 08:54:50.065  INFO 1604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 08:54:54.720  WARN 1604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 08:54:55.144  INFO 1604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 08:55:00.213  INFO 1604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-29 08:55:03.760  INFO 1604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 08:55:04.436  INFO 1604 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 58.193 seconds (JVM running for 79.264)
+2022-04-29 08:55:10.559  INFO 1604 --- [http-nio-9093-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-29 08:55:10.560  INFO 1604 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-29 08:55:10.562  INFO 1604 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-04-29 09:41:34.199  INFO 2536 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 2536 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 09:41:34.219  INFO 2536 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 09:41:34.949  INFO 2536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-29 09:41:34.949  INFO 2536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-29 09:41:43.251  INFO 2536 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 09:41:43.475  INFO 2536 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 180 ms. Found 2 JPA repository interfaces.
+2022-04-29 09:41:44.466  INFO 2536 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a18273c7-5d24-316b-babe-b18c1bcfa138
+2022-04-29 09:41:48.590  INFO 2536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 09:41:48.773  INFO 2536 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 09:41:48.774  INFO 2536 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 09:41:49.170  INFO 2536 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 09:41:49.170  INFO 2536 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14220 ms
+2022-04-29 09:41:49.910  INFO 2536 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-29 09:41:53.979  INFO 2536 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-29 09:41:53.996  INFO 2536 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 09:41:55.205  INFO 2536 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 09:41:55.675  INFO 2536 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-29 09:41:57.086  INFO 2536 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-29 09:41:57.648  INFO 2536 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 09:42:00.941  INFO 2536 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 09:42:00.998  INFO 2536 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 09:42:03.680  WARN 2536 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 09:42:03.870  INFO 2536 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 09:42:09.461  WARN 2536 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d9a514dd-d080-45bf-b69d-8e2efc811916
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-29 09:42:10.042  INFO 2536 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-29 09:42:10.117  INFO 2536 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-29 09:42:11.768  INFO 2536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 09:42:12.331  INFO 2536 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 43.456 seconds (JVM running for 49.609)
+2022-04-29 09:44:10.924  INFO 2536 --- [http-nio-9093-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-29 09:44:10.927  INFO 2536 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-29 09:44:10.931  INFO 2536 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-04-29 09:47:13.464  INFO 2536 --- [http-nio-9093-exec-10] c.s.h.controller.MandalsController       : ==================>Am inside getMandals() method
+2022-04-29 09:48:48.501  INFO 2536 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 09:48:48.530  INFO 2536 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-29 09:48:48.545  INFO 2536 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-29 09:49:08.489  INFO 1256 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 1256 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 09:49:08.493  INFO 1256 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 09:49:08.719  INFO 1256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-29 09:49:08.720  INFO 1256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-29 09:49:11.807  INFO 1256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 09:49:11.939  INFO 1256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
+2022-04-29 09:49:12.700  INFO 1256 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a18273c7-5d24-316b-babe-b18c1bcfa138
+2022-04-29 09:49:16.729  INFO 1256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 09:49:16.804  INFO 1256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 09:49:16.805  INFO 1256 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 09:49:17.297  INFO 1256 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 09:49:17.298  INFO 1256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8577 ms
+2022-04-29 09:49:17.739  INFO 1256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-29 09:49:19.469  INFO 1256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-29 09:49:19.501  INFO 1256 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 09:49:19.542 ERROR 1256 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityFilterChainRegistration' defined in class path resource [org/springframework/boot/autoconfigure/security/servlet/SecurityFilterAutoConfiguration.class]: Unsatisfied dependency expressed through method 'securityFilterChainRegistration' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties': Could not bind properties to 'SecurityProperties' : prefix=spring.security, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.security.user' to org.springframework.boot.autoconfigure.security.SecurityProperties$User
+2022-04-29 09:49:20.332  INFO 1256 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-29 09:49:20.734  WARN 1256 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2022-04-29 09:49:20.742  WARN 1256 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2022-04-29 09:49:20.768  WARN 1256 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-04-29 09:49:20.769  INFO 1256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-29 09:49:20.784  INFO 1256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-29 09:49:20.856  INFO 1256 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-04-22 09:23:24.234 ERROR 420 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2022-04-29 09:49:20.984 ERROR 1256 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -14,68 +647,43 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'COUNTRIES-CLIENT.FeignClientSpecification' could not be registered. A bean with that name has already been defined and overriding is disabled.
+Failed to bind properties under 'spring.security.user' to org.springframework.boot.autoconfigure.security.SecurityProperties$User:
+
+    Reason: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [org.springframework.boot.autoconfigure.security.SecurityProperties$User]
 
 Action:
 
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+Update your application's configuration
 
-2022-04-22 09:26:56.813  INFO 7432 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7432 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
-2022-04-22 09:26:56.817  INFO 7432 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
-2022-04-22 09:26:56.917  INFO 7432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-22 09:26:56.919  INFO 7432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-22 09:26:58.527  INFO 7432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-22 09:26:58.671  INFO 7432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 2 JPA repository interfaces.
-2022-04-22 09:26:59.444  INFO 7432 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5ec4832b-a768-347d-9c65-aecff48ffddd
-2022-04-22 09:27:02.122  INFO 7432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
-2022-04-22 09:27:02.204  INFO 7432 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-22 09:27:02.206  INFO 7432 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-22 09:27:02.512  INFO 7432 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-22 09:27:02.512  INFO 7432 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5588 ms
-2022-04-22 09:27:02.628  INFO 7432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-04-22 09:27:04.082  INFO 7432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-04-22 09:27:04.099  INFO 7432 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
-2022-04-22 09:27:04.936  INFO 7432 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-22 09:27:05.265  INFO 7432 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-04-22 09:27:05.889  INFO 7432 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-22 09:27:06.446  INFO 7432 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-04-22 09:27:08.866  INFO 7432 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-22 09:27:08.924  INFO 7432 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-22 09:27:11.548  WARN 7432 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-22 09:27:11.715  WARN 7432 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-04-22 09:27:17.432  INFO 7432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
-2022-04-22 09:27:17.995  INFO 7432 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 22.199 seconds (JVM running for 23.483)
-2022-04-22 09:28:51.123  INFO 7432 --- [http-nio-9093-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-22 09:28:51.124  INFO 7432 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-22 09:28:51.165  INFO 7432 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 40 ms
-2022-04-22 09:41:26.033  INFO 7432 --- [http-nio-9093-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 9698 ms
-2022-04-22 09:46:18.748  INFO 7432 --- [http-nio-9093-exec-8] c.s.h.controller.MandalsController       : ==================>Am inside getMandals() method
-2022-04-22 09:52:48.258  INFO 7432 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-22 09:52:50.997  INFO 7432 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-04-22 09:52:52.538  INFO 7432 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-04-22 09:53:19.920  INFO 7432 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 7432 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
-2022-04-22 09:53:19.967  INFO 7432 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
-2022-04-22 09:53:25.397  INFO 7432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-22 09:53:25.451  INFO 7432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
-2022-04-22 09:53:25.765  INFO 7432 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5ec4832b-a768-347d-9c65-aecff48ffddd
-2022-04-22 09:53:31.754  INFO 7432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
-2022-04-22 09:53:31.759  INFO 7432 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-22 09:53:31.760  INFO 7432 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-22 09:53:31.869  INFO 7432 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-22 09:53:31.869  INFO 7432 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11892 ms
-2022-04-22 09:53:31.953  INFO 7432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-04-22 09:53:32.051  INFO 7432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-04-22 09:53:32.051  INFO 7432 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
-2022-04-22 09:53:32.134  INFO 7432 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-22 09:53:32.156  INFO 7432 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-04-22 09:53:32.844  INFO 7432 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-22 09:53:32.845  INFO 7432 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-22 09:53:33.293  WARN 7432 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-22 09:53:33.426  WARN 7432 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-04-22 09:53:35.975  INFO 7432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
-2022-04-22 09:53:36.696  INFO 7432 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 18.262 seconds (JVM running for 1602.189)
-2022-04-22 09:53:36.702  INFO 7432 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-22 09:55:28.704  INFO 7432 --- [RMI TCP Connection(30)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2022-04-22 09:55:29.327  INFO 7432 --- [RMI TCP Connection(30)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-22 09:55:29.331  INFO 7432 --- [RMI TCP Connection(30)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-04-22 09:55:29.464  INFO 7432 --- [RMI TCP Connection(30)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-04-29 09:53:08.438  INFO 6904 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Starting StateGovApplication using Java 1.8.0_241 on DESKTOP-H2AEHVK with PID 6904 (D:\spring-boot\state-government-management-system\target\classes started by Dell in D:\spring-boot\state-government-management-system)
+2022-04-29 09:53:08.449  INFO 6904 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : The following 1 profile is active: "sql"
+2022-04-29 09:53:08.722  INFO 6904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-29 09:53:08.722  INFO 6904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-29 09:53:11.878  INFO 6904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-29 09:53:12.028  INFO 6904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 2 JPA repository interfaces.
+2022-04-29 09:53:12.614  INFO 6904 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a18273c7-5d24-316b-babe-b18c1bcfa138
+2022-04-29 09:53:14.243  INFO 6904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2022-04-29 09:53:14.259  INFO 6904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-29 09:53:14.262  INFO 6904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-29 09:53:14.754  INFO 6904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-29 09:53:14.754  INFO 6904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6031 ms
+2022-04-29 09:53:15.232  INFO 6904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-29 09:53:16.908  INFO 6904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-29 09:53:16.927  INFO 6904 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/springboottraining2022mar'
+2022-04-29 09:53:17.879  INFO 6904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-29 09:53:18.000  INFO 6904 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-29 09:53:18.289  INFO 6904 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-29 09:53:20.521  INFO 6904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-04-29 09:53:23.042  INFO 6904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-29 09:53:23.055  INFO 6904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-29 09:53:25.251  WARN 6904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-29 09:53:25.362  INFO 6904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-29 09:53:33.270  INFO 6904 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-29 09:53:33.565  INFO 6904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-29 09:53:35.166  INFO 6904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2022-04-29 09:53:36.161  INFO 6904 --- [restartedMain] c.s.helloworldapp.StateGovApplication    : Started StateGovApplication in 28.91 seconds (JVM running for 30.099)
+2022-04-29 09:53:46.835  INFO 6904 --- [http-nio-9093-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-29 09:53:46.836  INFO 6904 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-29 09:53:46.840  INFO 6904 --- [http-nio-9093-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-04-29 09:53:47.088  INFO 6904 --- [http-nio-9093-exec-1] c.s.h.controller.MandalsController       : ==================>Am inside getMandals() method
+2022-04-29 09:54:10.108  INFO 6904 --- [http-nio-9093-exec-8] c.s.h.controller.MandalsController       : ==================>Am inside getMandals() method
