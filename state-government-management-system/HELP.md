@@ -1097,7 +1097,76 @@ Lets the application be gracefully shutdown. Disabled by default.
 It performs a thread dump.
 /metrics
 It shows several useful metrics information like JVM memory used, system CPU usage, open files, and much more.
-		
+
+
+locaalhost:8080/mandlas/list
+
+spring seurity
+custom username with custom pasowrd
+oauth2(gmail/fcebok/sso login/github)
+jwt token		
+
+gmail autentication
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/springboottraining2022mar
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.p4=root
+spring.datasource.p5=root
+spring.datasource.p6=root
+
+------------------------------------------
+spring:
+    datasource:
+           url:kfnkeenf
+           username:jujha
+           pwd:hhasha
+
+spring.security.user= jbqsdjf
+spring.security.pwd=mndvwn
+
+--------------
+spring:
+    security:
+          user:jvjsgf
+          pwd:dajwefh
+          
+          
+          
+          spring:
+  security:
+   oauth2:
+     client:
+       registration:
+         github:
+           clientId: 59120712a5767ed5a07a
+           clientSecret: 4b543dbc404f8a91c6cd6da261cbc79ae753c0f7
+         google:
+          clientId: 133204133934-3hl22f71ctt822kndnk0oqgl3bgc3f5b.apps.googleusercontent.com
+          clientSecret: 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
+         facebook:
+          clientId: 664077928143063
+          clientSecret: 9256279404a10094dc3a7fb50fa854d0
+          accessTokenUri: https://graph.facebook.com/oauth/access_token
+          userAuthorizationUri: https://www.facebook.com/dialog/oauth
+          tokenName: oauth_token
+          authenticationScheme: query
+          clientAuthenticationScheme: form
+     resource:
+       userInfoUri: https://graph.facebook.com/me
+
+security.oauth2.client.regisytaration.github.clientid= gsgsdfs
+security.oauth2.client.regisytaration.github.clientsecreir:jewjebfje
+security.oauth2.client.regisytaration.google.clientid= gsgsdfs
+            
+            
+Actuator:
+---------
+metrics
+configurations
+up and running or not
+beans
 		
 		
 		
