@@ -76,6 +76,16 @@ jbsdjfbdf@12345
 toString()---from super class Object
 
 
+http://localhost:9192/---dint pass the token in the header
+{
+    "timestamp": "2022-05-07T03:39:32.537+0000",
+    "status": 403,
+    "error": "Forbidden",
+    "message": "Access Denied",
+    "path": "/"
+}
+
+
 
 
 
